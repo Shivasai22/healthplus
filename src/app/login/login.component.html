@@ -1,4 +1,4 @@
-<div id="main">
+<!-- <div id="main">
     <div id="left"></div>
     <div id="right">
         <div id="right">
@@ -18,4 +18,55 @@
             </div>
     
     </div>
+</div> -->
+<br /><br />
+<div class="container pt-3">
+  <div>
+    <mat-card>
+      <mat-card-title style="text-align: center"> Login </mat-card-title>
+      <mat-card-content>
+        <form [formGroup]="loginUserForm" (ngSubmit)="OnSubmit()">
+          <div class="row">
+            <div class="col">
+              <mat-form-field style="width: 100%">
+                <label>Email id</label>
+                <input
+                  matInput
+                  type="email"
+                  placeholder="email id"
+                  required
+                  formControlName="email"
+                />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <mat-form-field style="width: 100%">
+                <label>Password</label>
+                <input
+                  matInput
+                  type="password"
+                  placeholder="email id"
+                  required
+                  formControlName="password"
+                />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <button
+              mat-raised-button
+              color="primary"
+              style="width: 100%"
+              type="submit"
+            >
+              Login
+            </button>
+          </div>
+        </form>
+        <p>Don't have an account? <a routerLink="/signup">Sign Up</a></p>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>
